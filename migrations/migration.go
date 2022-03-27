@@ -29,7 +29,6 @@ func Migrate() {
 		config.MySQL.Port,
 		config.MySQL.Database,
 	)
-	fmt.Print(dsn)
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
